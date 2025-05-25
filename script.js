@@ -24,7 +24,7 @@ async function printInfo(input) {
     const conditions = document.querySelector('.conditions');
     const rainChance = document.querySelector('.rain span');
     const windSpeed = document.querySelector('.wind span');
-    
+
     location.textContent = info.location;
     temp.textContent = info.temp;
     conditions.textContent = info.conditions;
@@ -33,7 +33,6 @@ async function printInfo(input) {
 
     document.querySelector('main').style.display = 'flex';
 }
-
 
 const search = document.querySelector('.search button');
 search.addEventListener('click', () => {
