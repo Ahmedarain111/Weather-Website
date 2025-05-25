@@ -6,8 +6,6 @@ async function getWeather(location) {
 
 async function getInfo(location) {
     let data = await getWeather(location);
-    // console.log(data);
-    // console.log(data.currentConditions.temp);
     return {
         temp: data.currentConditions.temp,
         conditions: data.currentConditions.conditions,
@@ -30,7 +28,5 @@ async function printInfo() {
     rainChance.textContent = info.rainChance;
     windSpeed.textContent = info.windSpeed;
 }
-
-printInfo();
 
 
