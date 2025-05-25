@@ -10,7 +10,7 @@ header {
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     padding: 20px;
-    background-color: darkslategray;
+    background-color: #0077b6;;
 }
 
 .logo {
