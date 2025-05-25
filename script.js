@@ -20,7 +20,7 @@ async function getInfo(location) {
 async function printInfo(input) {
     let info = await getInfo(input);
     const location = document.querySelector('.location');
-    const temp = document.querySelector('.temperature');
+    const temp = document.querySelector('.temperature span');
     const conditions = document.querySelector('.conditions');
     const rainChance = document.querySelector('.rain span');
     const windSpeed = document.querySelector('.wind span');
