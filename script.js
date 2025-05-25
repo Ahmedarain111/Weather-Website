@@ -1,5 +1,7 @@
 async function getWeather(location) {
-    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=9AQNULLRWZR3VFTNNDGN94J2A&unitGroup=metric&include=current`);
+    let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=9AQNULLRWZR3VFTNNDGN94J2A&unitGroup=metric&include=current`, {
+        mode: 'cors'
+    });
     response = await response.json();
     return response;
 }
@@ -15,8 +17,8 @@ async function getInfo(location) {
     }
 }
 
-async function printInfo() {
-    let info = await getInfo('Hyderabad');
+async function printInfo(input) {
+    let info = await getInfo(input);
     const location = document.querySelector('.location');
     const temp = document.querySelector('.temperature');
     const conditions = document.querySelector('.conditions');
@@ -28,5 +30,13 @@ async function printInfo() {
     conditions.textContent = info.conditions;
     rainChance.textContent = info.rainChance;
     windSpeed.textContent = info.windSpeed;
+
+    document.querySelector('main').style.display = 'flex';
 }
 
+
+const search = document.querySelector('.search button');
+search.addEventListener('click', () => {
+    const input = document.querySelector('input').value;
+    printInfo(input);
+})
