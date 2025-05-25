@@ -42,7 +42,7 @@ header {
 }
 
 .toggle-unit {
-    justify-self: end; 
+    justify-self: end;
 }
 
 .toggle-unit button {
@@ -51,4 +51,55 @@ header {
     border-radius: 4px;
     border: none;
     background-color: white;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f0f4f8;
+    min-height: 70vh;
+}
+
+.weather-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.location {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin: 10px 0;
+}
+
+.conditions {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.detail span {
+    font-weight: bold;
+    color: #222;
 }
