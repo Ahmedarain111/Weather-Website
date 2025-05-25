@@ -54,7 +54,7 @@ header {
 }
 
 .weather-container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
