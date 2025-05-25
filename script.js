@@ -18,7 +18,17 @@ async function getInfo(location) {
 
 async function printInfo() {
     let info = await getInfo('Hyderabad');
-    console.log(info.temp);
+    const location = document.querySelector('.location');
+    const temp = document.querySelector('.temperature');
+    const conditions = document.querySelector('.conditions');
+    const rainChance = document.querySelector('.rain span');
+    const windSpeed = document.querySelector('.wind span');
+    
+    location.textContent = info.location;
+    temp.textContent = info.temp;
+    conditions.textContent = info.conditions;
+    rainChance.textContent = info.rainChance;
+    windSpeed.textContent = info.windSpeed;
 }
 
 printInfo();
